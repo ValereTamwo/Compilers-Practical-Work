@@ -5,20 +5,15 @@
 Etat *create_etat(int id, bool isFinal, bool isInit)
 {
     Etat *etat = (Etat *)malloc(sizeof(Etat));
-    if (etat == NULL) {
-        return NULL;  // Gestion d'erreur si l'allocation échoue
-    }
+    
 
     etat->id = id;
     etat->isFinal = isFinal;
     etat->isInit = isInit;
 
-    // Allocation pour le tableau de transitions
+    
     etat->trans = (Trans *)malloc(26 * sizeof(Trans));
-    if (etat->trans == NULL) {
-        free(etat);  // Libération de l'état déjà alloué si l'allocation échoue
-        return NULL;
-    }
+    
 
     // Initialisation de la table de transitions
     for (int i = 0; i < 26; ++i) {

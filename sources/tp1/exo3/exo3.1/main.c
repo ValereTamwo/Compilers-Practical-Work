@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>  // Include string.h for strcpy
+#include <string.h>  
 #include "./head/init.h"
 
 
@@ -53,7 +53,6 @@ Automate *construire_automate()
     return automate;
 }
 
-// Fonction main qui appelle construire_automate
 int main(int argc, char *argv[])
 {
     if (argc != 2) {
