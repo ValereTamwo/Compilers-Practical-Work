@@ -1,2 +1,0 @@
-gcc -o exo1 main.c file_operations.c string_operations.c
-./exo1 lire.txt

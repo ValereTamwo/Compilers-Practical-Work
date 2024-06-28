@@ -1,2 +1,0 @@
-gcc -o exo2 main.c file_operations.c string_operations.c
-./exo2 lire.txt mur
