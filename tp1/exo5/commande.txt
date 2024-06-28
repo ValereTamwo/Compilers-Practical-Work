@@ -1,0 +1,2 @@
+grep -c -E '^if.*n$' test.txt
+grep -c -E '^if.*n\s*$' /etc/bash.bashrc
