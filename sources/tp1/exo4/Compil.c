@@ -39,6 +39,10 @@ void analyse_lexicale(char *expression) {
     printf("\nAnalyse lexicale réussie.\n");
 }
 
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
 int main(int argc, char *argv[]) {
     FILE *fichier;
     char expression[1000]; // Taille maximale de l'expression
