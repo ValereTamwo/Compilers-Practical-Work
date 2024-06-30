@@ -12,6 +12,7 @@ digit [0-9]
 entier {digit}{digit}+
 operateur \+|\*
 
+
 %%
 {entier}    { printf("<int:%s>", yytext); }
 {operateur} { printf("<operateur:%s>", yytext); }
