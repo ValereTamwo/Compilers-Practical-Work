@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>  // Include string.h for strcpy
+#include <string.h>  
 #include "./head/init.h"
 
 

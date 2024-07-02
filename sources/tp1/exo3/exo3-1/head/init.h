@@ -5,10 +5,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// Définition de la structure Trans avant Etat
 typedef struct {
-    struct Etat *destination; // Utilisation de struct Etat pour éviter une référence incomplète
-} Trans;
+    struct Etat *destination; 
+    } Trans;
 typedef struct {
     char mot[15];  
     int presence;    
@@ -24,7 +23,7 @@ typedef struct Etat {
 typedef struct {
     int num_etats;
     Etat initial;
-    Etat **etats; // Modifier pour utiliser Etat **
+    Etat **etats;
 } Automate;
 
 // Déclarations des fonctions

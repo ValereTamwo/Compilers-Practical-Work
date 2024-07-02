@@ -5,25 +5,18 @@
 Etat *create_etat(int id, bool isFinal, bool isInit)
 {
     Etat *etat = (Etat *)malloc(sizeof(Etat));
-    if (etat == NULL) {
-        return NULL;  // Gestion d'erreur si l'allocation échoue
-    }
+    
 
     etat->id = id;
     etat->isFinal = isFinal;
     etat->isInit = isInit;
 
-    // Allocation pour le tableau de transitions
     etat->trans = (Trans *)malloc(26 * sizeof(Trans));
-    if (etat->trans == NULL) {
-        free(etat);  // Libération de l'état déjà alloué si l'allocation échoue
-        return NULL;
-    }
+    
 
     // Initialisation de la table de transitions
     for (int i = 0; i < 26; ++i) {
-          // Le symbole est converti à partir du code ASCII
-        etat->trans[i].destination = NULL;  // Destination par défaut (à définir selon la logique de votre application)
+        etat->trans[i].destination = NULL; 
     }
 
     return etat;
@@ -83,7 +76,6 @@ void completer_automate(Automate *automate, Etat *etat)
     for (int i = 0; i < automate->num_etats; i++) {
         Etat *current_etat = automate->etats[i];
         
-        // Parcourir les transitions de l'état courant
         for (int j = 0; j < 26; j++) {
             if (current_etat->trans[j].destination == NULL) {
                 current_etat->trans[j].destination = etat;
